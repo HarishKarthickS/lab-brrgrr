@@ -2,8 +2,9 @@
 // unless absolutely needed.
 
 //Initial price of the burger
-var wholeWheatBun = 10;
-
+var wholeWheatBun = 20;
+ let price = document.getElementById("price-details");
+  price.innerText='INR 170';
 //Ingredients of the burger along with the price
 // Clue: the name is same as the textcontent of the button. Will be useful later on :)
 var ingredients = {
@@ -30,7 +31,7 @@ function renderAll() {
   renderTomatoes();
   renderOnions();
   renderLettuce();
-  renderButtons();
+//   renderButtons();
   renderIngredientsBoard();
   renderPrice();
 }
@@ -187,8 +188,8 @@ function renderIngredientsBoard(){
   
   function renderPrice(){
     let total = calculate();
-    let price = document.querySelector(".price-details")
-    price.textContent = `INR ${total}`
+    price.innerText = `INR ${total}`;
+
   
     function calculate() {
       let total = wholeWheatBun;
